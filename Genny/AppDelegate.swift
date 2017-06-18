@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  ch40-hybrid
+//  Genny
 //
 //  Created by Garri Adrian Nablo on 6/14/17.
 //
@@ -8,27 +8,11 @@
 
 import UIKit
 
-func sizeof <T> (_ : T.Type) -> Int
-{
-    return (MemoryLayout<T>.size)
-}
-
-func sizeof <T> (_ : T) -> Int
-{
-    return (MemoryLayout<T>.size)
-}
-
-func sizeof <T> (_ value : [T]) -> Int
-{
-    return (MemoryLayout<T>.size * value.count)
-}
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         signal(SIGPIPE, SIG_IGN)

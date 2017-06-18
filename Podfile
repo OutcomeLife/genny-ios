@@ -2,7 +2,7 @@
 
 platform :ios, '10.0'
 
-target 'ch40-hybrid' do
+target 'Genny' do
     use_frameworks!
     inhibit_all_warnings!
 

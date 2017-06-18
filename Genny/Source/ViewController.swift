@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  ch40-hybrid
+//  Genny
 //
 //  Created by Garri Adrian Nablo on 6/14/17.
 //
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         
         initializeEventBus()
         
-        let urlString = "https://bouncer.outcome-hub.com/auth/realms/channel40/account"
+        let urlString = "https://bouncer.outcome-hub.com/auth/realms/genny/account"
         guard let keyCloakURL = URL(string: urlString) else { return }
         
         let keyCloakRequest = URLRequest(url: keyCloakURL)

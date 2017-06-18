@@ -1,6 +1,6 @@
 //
-//  ch40_hybridUITests.swift
-//  ch40-hybridUITests
+//  GennyUITests.swift
+//  GennyUITests
 //
 //  Created by Garri Adrian Nablo on 6/14/17.
 //
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class ch40_hybridUITests: XCTestCase {
+class GennyUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

@@ -1,6 +1,6 @@
 //
 //  KeychainGateway.swift
-//  ch40-hybrid
+//  Genny
 //
 //  Created by Garri Adrian Nablo on 6/18/17.
 //
@@ -11,7 +11,7 @@ import SwiftKeychainWrapper
 
 final class KeychainGateway {
     
-    fileprivate static let authTokenKey = "com.ch40-hybrid.auth.token"
+    fileprivate static let authTokenKey = "com.genny.auth.token"
     
     static let shared = KeychainGateway()
 }

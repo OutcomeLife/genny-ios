@@ -1,6 +1,6 @@
 //
 //  AuthenticationServiceProtocol.swift
-//  ch40-hybrid
+//  Genny
 //
 //  Created by Garri Adrian Nablo on 6/15/17.
 //

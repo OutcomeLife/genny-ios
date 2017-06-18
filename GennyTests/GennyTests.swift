@@ -1,15 +1,15 @@
 //
-//  ch40_hybridTests.swift
-//  ch40-hybridTests
+//  GennyTests.swift
+//  GennyTests
 //
 //  Created by Garri Adrian Nablo on 6/14/17.
 //
 //
 
 import XCTest
-@testable import ch40_hybrid
+@testable import Genny
 
-class ch40_hybridTests: XCTestCase {
+class GennyTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
