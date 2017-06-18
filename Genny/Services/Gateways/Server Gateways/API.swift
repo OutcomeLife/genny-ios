@@ -13,7 +13,6 @@ enum API {
     
     static let baseURLString = "https://bouncer.outcome-hub.com"
     
-    case login(String, String)
     case logout(String)
 }
 
@@ -22,7 +21,7 @@ extension API {
     
     var method: HTTPMethod {
         switch self {
-        case .login, .logout:
+        case .logout:
             return .post
         }
     }
@@ -33,8 +32,6 @@ extension API {
     
     var endpoint: String {
         switch self {
-        case .login:
-            return "/auth/realms/channel40/protocol/openid-connect/token"
         case .logout:
             return "/auth/realms/channel40/protocol/openid-connect/logout"
         }
@@ -47,12 +44,6 @@ extension API: URLRequestConvertible {
     func asURLRequest() throws -> URLRequest {
         let parameters: [String: Any]? = {
             switch self {
-            case .login(let username, let password):
-                return ["username": username,
-                        "password": password,
-                        "grant_type": "password",
-                        "client_id": "ios",
-                        "client_secret": "9662fa26-dd6b-4efb-a25d-3a2d690e352a"]
             case .logout(let token):
                 return ["refresh_token": token, "client_id": "ios"]
             }

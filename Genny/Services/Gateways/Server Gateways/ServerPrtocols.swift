@@ -11,7 +11,5 @@ import PromiseKit
 
 protocol ServerAuthenticationProtocol {
     
-    func login(username: String, password: String) -> Promise<String>
-    
     func logout(token: String) -> Promise<Bool>
 }

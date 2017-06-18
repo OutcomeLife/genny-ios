@@ -231,9 +231,8 @@
 		73BC9C621EF26AE100032F36 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				73BC9C541EF24DC500032F36 /* Gateways */,
-				73D262031EF66F250001E9CA /* Keychain Services */,
 				73BC9C631EF26B0000032F36 /* Authentication Services */,
+				73BC9C541EF24DC500032F36 /* Gateways */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -245,13 +244,6 @@
 				73BC9C671EF26B5E00032F36 /* AuthenticationService.swift */,
 			);
 			path = "Authentication Services";
-			sourceTree = "<group>";
-		};
-		73D262031EF66F250001E9CA /* Keychain Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Keychain Services";
 			sourceTree = "<group>";
 		};
 		73D262041EF66F430001E9CA /* Keychain Gateway */ = {
