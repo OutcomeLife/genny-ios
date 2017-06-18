@@ -1,0 +1,43 @@
+PODS:
+  - Alamofire (4.4.0)
+  - BlueSocket (0.12.35)
+  - GDChannel (0.6.0):
+    - MQTTKit (~> 0.1.0)
+  - MQTTKit (0.1.0)
+  - PKHUD (4.2.1)
+  - PromiseKit (4.2.0):
+    - PromiseKit/Foundation (= 4.2.0)
+    - PromiseKit/QuartzCore (= 4.2.0)
+    - PromiseKit/UIKit (= 4.2.0)
+  - PromiseKit/CorePromise (4.2.0)
+  - PromiseKit/Foundation (4.2.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.2.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.2.0):
+    - PromiseKit/CorePromise
+  - SwiftKeychainWrapper (3.0.1)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - BlueSocket
+  - GDChannel
+  - PKHUD (~> 4.0)
+  - PromiseKit (~> 4.0)
+  - SwiftKeychainWrapper
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  BlueSocket: 4cdbbcd62b2b02897817b689477f4d4f3fa54944
+  GDChannel: 021418a45a287d9f3629b4aeefbdc457a7684fe3
+  MQTTKit: a4e6b8aa92db1aeae917d2b773fd72a7749937c4
+  PKHUD: 957ce2a68b3c97a51839b30216120c1dbc0c3a78
+  PromiseKit: 08dfb783c161ddcd95b7912421f14c5113fd8318
+  SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 7b343f5d15c86a170b407ff1a8d08c5f3595d464
+
+COCOAPODS: 1.2.1
