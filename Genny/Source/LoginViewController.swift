@@ -15,11 +15,12 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlString = "https://bouncer.outcome-hub.com/auth/realms/genny/account"
+        let urlString = "https://keycloak.pleasedproperty.com.au/auth/realms/Genny/account"
         guard let keyCloakURL = URL(string: urlString) else { return }
         
         let keyCloakRequest = URLRequest(url: keyCloakURL)
         webView.loadRequest(keyCloakRequest)
+        webView.scrollView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,5 +41,13 @@ extension LoginViewController: UIWebViewDelegate {
         performSegue(withIdentifier: "main", sender: nil)
         
         return true
+    }
+}
+
+// MARK: - UIScrollViewDelegate
+extension LoginViewController: UIScrollViewDelegate {
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return nil
     }
 }
