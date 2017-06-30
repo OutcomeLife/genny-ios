@@ -3,7 +3,7 @@
 //  Genny
 //
 //  Created by Garri Adrian Nablo on 6/14/17.
-//
+//  Copyright © 2017 OutcomeLife. All rights reserved.
 //
 
 import UIKit
