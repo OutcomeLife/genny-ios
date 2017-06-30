@@ -20,17 +20,11 @@
 		73A495D71EF53A270012CA4E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A495D21EF53A270012CA4E /* Response.swift */; };
 		73A495D81EF53A270012CA4E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A495D31EF53A270012CA4E /* Util.swift */; };
 		73BC9C571EF2551400032F36 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC9C561EF2551400032F36 /* API.swift */; };
-		73BC9C581EF2551400032F36 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC9C561EF2551400032F36 /* API.swift */; };
 		73BC9C5A1EF2681100032F36 /* ServerPrtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC9C591EF2681100032F36 /* ServerPrtocols.swift */; };
-		73BC9C5B1EF2681100032F36 /* ServerPrtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC9C591EF2681100032F36 /* ServerPrtocols.swift */; };
 		73BC9C5D1EF2688400032F36 /* ServerGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC9C5C1EF2688400032F36 /* ServerGateway.swift */; };
-		73BC9C5E1EF2688400032F36 /* ServerGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC9C5C1EF2688400032F36 /* ServerGateway.swift */; };
 		73BC9C601EF268F600032F36 /* ServerGateway+Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC9C5F1EF268F600032F36 /* ServerGateway+Authentication.swift */; };
-		73BC9C611EF268F600032F36 /* ServerGateway+Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC9C5F1EF268F600032F36 /* ServerGateway+Authentication.swift */; };
 		73BC9C651EF26B2F00032F36 /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC9C641EF26B2F00032F36 /* AuthenticationServiceProtocol.swift */; };
-		73BC9C661EF26B2F00032F36 /* AuthenticationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC9C641EF26B2F00032F36 /* AuthenticationServiceProtocol.swift */; };
 		73BC9C681EF26B5E00032F36 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC9C671EF26B5E00032F36 /* AuthenticationService.swift */; };
-		73BC9C691EF26B5E00032F36 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC9C671EF26B5E00032F36 /* AuthenticationService.swift */; };
 		73D262021EF663100001E9CA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D262011EF663100001E9CA /* MainViewController.swift */; };
 		73D262061EF66F6F0001E9CA /* KeychainGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D262051EF66F6F0001E9CA /* KeychainGateway.swift */; };
 		73D262081EF66FC20001E9CA /* KeychainSavingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D262071EF66FC20001E9CA /* KeychainSavingProtocol.swift */; };
@@ -461,13 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73BC9C581EF2551400032F36 /* API.swift in Sources */,
 				73647D081EF1915F0044C2F6 /* GennyTests.swift in Sources */,
-				73BC9C611EF268F600032F36 /* ServerGateway+Authentication.swift in Sources */,
-				73BC9C661EF26B2F00032F36 /* AuthenticationServiceProtocol.swift in Sources */,
-				73BC9C5B1EF2681100032F36 /* ServerPrtocols.swift in Sources */,
-				73BC9C5E1EF2688400032F36 /* ServerGateway.swift in Sources */,
-				73BC9C691EF26B5E00032F36 /* AuthenticationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
