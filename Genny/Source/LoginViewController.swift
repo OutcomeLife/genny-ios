@@ -22,11 +22,6 @@ final class LoginViewController: UIViewController {
         webView.loadRequest(keyCloakRequest)
         webView.scrollView.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 
 // MARK: - UIWebViewDelegate

@@ -14,7 +14,6 @@
 		73647CFD1EF1915F0044C2F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73647CFB1EF1915F0044C2F6 /* LaunchScreen.storyboard */; };
 		73647D081EF1915F0044C2F6 /* GennyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73647D071EF1915F0044C2F6 /* GennyTests.swift */; };
 		73647D131EF1915F0044C2F6 /* GennyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73647D121EF1915F0044C2F6 /* GennyUITests.swift */; };
-		737652D11EF68A49003A832D /* Int+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737652D01EF68A49003A832D /* Int+Additions.swift */; };
 		73A495D41EF53A270012CA4E /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A495CF1EF53A270012CA4E /* EventBus.swift */; };
 		73A495D51EF53A270012CA4E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A495D01EF53A270012CA4E /* Message.swift */; };
 		73A495D61EF53A270012CA4E /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A495D11EF53A270012CA4E /* Mutex.swift */; };
@@ -71,7 +70,6 @@
 		73647D0E1EF1915F0044C2F6 /* GennyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GennyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73647D121EF1915F0044C2F6 /* GennyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GennyUITests.swift; sourceTree = "<group>"; };
 		73647D141EF1915F0044C2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		737652D01EF68A49003A832D /* Int+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Additions.swift"; sourceTree = "<group>"; };
 		73A495CF1EF53A270012CA4E /* EventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBus.swift; sourceTree = "<group>"; };
 		73A495D01EF53A270012CA4E /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		73A495D11EF53A270012CA4E /* Mutex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				73647CF21EF1915F0044C2F6 /* AppDelegate.swift */,
-				737652CF1EF68A22003A832D /* Extensions */,
 				73BC9C621EF26AE100032F36 /* Services */,
 				73A495CE1EF53A270012CA4E /* Vertx */,
 				735BF98A1EF6877700432139 /* Source */,
@@ -186,14 +183,6 @@
 				73647D141EF1915F0044C2F6 /* Info.plist */,
 			);
 			path = GennyUITests;
-			sourceTree = "<group>";
-		};
-		737652CF1EF68A22003A832D /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				737652D01EF68A49003A832D /* Int+Additions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		73A495CE1EF53A270012CA4E /* Vertx */ = {
@@ -458,7 +447,6 @@
 				73BC9C5D1EF2688400032F36 /* ServerGateway.swift in Sources */,
 				73D262021EF663100001E9CA /* MainViewController.swift in Sources */,
 				73A495D81EF53A270012CA4E /* Util.swift in Sources */,
-				737652D11EF68A49003A832D /* Int+Additions.swift in Sources */,
 				73D262061EF66F6F0001E9CA /* KeychainGateway.swift in Sources */,
 				73A495D61EF53A270012CA4E /* Mutex.swift in Sources */,
 				73647CF31EF1915F0044C2F6 /* AppDelegate.swift in Sources */,
