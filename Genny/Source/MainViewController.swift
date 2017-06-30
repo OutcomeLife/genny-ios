@@ -30,31 +30,21 @@ final class MainViewController: UIViewController {
 extension MainViewController {
     
     fileprivate func initializeEventBus() {
-        eventBus = EventBus(host: "10.5.12.113/eventbus", port: 8081)
-        eventBus.register { print("register error: \($0)") }
+        eventBus = EventBus(host: "localhost", port: 8081)
         
         do {
-            signal(SIGPIPE, SIG_IGN)
-            var value = 1;
-            setsockopt(8081, SOL_SOCKET, SO_NOSIGPIPE, &value, socklen_t(sizeof(Int.self)));
             try eventBus.connect()
-        } catch let error {
-            print("error connect:\(error)")
-        }
-        
-        do {
-            _ = try eventBus.register(address: "address.outbound",
-                                      id: "1",
-                                      headers: ["hello": "world"], handler: { _ in })
             
             do {
-                let json = JSON(arrayLiteral: ["message", "hello from ios"])
-                try eventBus.publish(to: "address.inbound", body: ["json": json])
+                _ = try eventBus.register(address: "address.outbound") { message in
+                    print("got message \(message.body)")
+                }
             } catch let error {
-                print("error send: \(error)")
+                print("Error Registering: " + error.localizedDescription)
             }
+            
         } catch let error {
-            print("error reg:\(error)")
+            print("Error Connecting: " + error.localizedDescription)
         }
     }
 }
@@ -63,13 +53,10 @@ extension MainViewController {
 extension MainViewController {
     
     @IBAction fileprivate func didTapButton() {
-        guard eventBus.connected() else { return }
-        
-        let json = JSON(arrayLiteral: ["message", "hello from ios"])
         do {
-            try eventBus.publish(to: "address.inbound", body: ["json": json])
+            try eventBus.publish(to: "address.inbound", body: ["message": "hello from ios!"])
         } catch let error {
-            print("error send: \(error)")
+            print("Error Publishing: " + error.localizedDescription)
         }
     }
 }
