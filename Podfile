@@ -7,7 +7,6 @@ target 'Genny' do
     inhibit_all_warnings!
 
     pod 'SwiftyJSON'
-    pod 'GDChannel'
     pod 'BlueSocket'
     pod 'SwiftKeychainWrapper'
     
