@@ -21,32 +21,14 @@ final class EventBusManager: NSObject {
     fileprivate var listeners: [EventBusManagerDelegate] = []
     static let shared = EventBusManager()
     
+    var isConnected: Bool {
+        return eventBus.connected()
+    }
+    
     override private init() {
-        EventBus(host: <#T##String#>, port: <#T##Int#>, pingEvery: <#T##Int#>)
         eventBus = EventBus(host: "localhost", port: 8081)
         super.init()
         connect()
-    }
-        
-    
-    func connect() {
-        do {
-            try eventBus.connect()
-            
-            do {
-                _ = try eventBus.register(address: "address.outbound") { message in
-                    print("Message: \(message.body)")
-                }
-                
-                eventBus.register(errorHandler: { error in
-                    print("Error: " + error.localizedDescription)
-                })
-            } catch let error {
-                listeners.forEach { $0.manager(didReceiveError: error) }
-            }
-        } catch let error {
-            listeners.forEach { $0.manager(didReceiveError: error) }
-        }
     }
     
     func add(listener: EventBusManagerDelegate) {
@@ -60,6 +42,32 @@ final class EventBusManager: NSObject {
         }
         
         listeners.remove(at: indexToRemove)
+    }
+    
+    func connect() {
+        do {
+            try eventBus.connect()
+            listeners.forEach { $0.managerDidConnect() }
+            
+            do {
+                _ = try eventBus.register(address: "address.outbound") { message in
+                    print("Message: \(message.body)")
+                }
+                
+                eventBus.register(errorHandler: { error in
+                    switch error {
+                    case .disconnected:
+                        self.listeners.forEach { $0.managerDidDisconnect() }
+                    case .invalidData, .serverError:
+                        self.listeners.forEach { $0.manager(didReceiveError: error) }
+                    }
+                })
+            } catch let error {
+                listeners.forEach { $0.manager(didReceiveError: error) }
+            }
+        } catch let error {
+            listeners.forEach { $0.manager(didReceiveError: error) }
+        }
     }
     
     func publish(data: [String: Any]) {
