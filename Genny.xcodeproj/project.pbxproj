@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		735390361F18B68800DD4A4F /* EventBusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735390351F18B68800DD4A4F /* EventBusManager.swift */; };
 		73647CF31EF1915F0044C2F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73647CF21EF1915F0044C2F6 /* AppDelegate.swift */; };
 		73647CF51EF1915F0044C2F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73647CF41EF1915F0044C2F6 /* LoginViewController.swift */; };
 		73647CF81EF1915F0044C2F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73647CF61EF1915F0044C2F6 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		2B47BECB91FE581EB854F914 /* Pods-Genny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genny.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Genny/Pods-Genny.debug.xcconfig"; sourceTree = "<group>"; };
 		69594F571E72E62FEBB057A6 /* Pods_Genny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		735390351F18B68800DD4A4F /* EventBusManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBusManager.swift; sourceTree = "<group>"; };
 		73647CEF1EF1915F0044C2F6 /* Genny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73647CF21EF1915F0044C2F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73647CF41EF1915F0044C2F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		735390331F18B63100DD4A4F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				735390341F18B66C00DD4A4F /* Managers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		735390341F18B66C00DD4A4F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				735390351F18B68800DD4A4F /* EventBusManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		735BF98A1EF6877700432139 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +169,7 @@
 			children = (
 				73647CF21EF1915F0044C2F6 /* AppDelegate.swift */,
 				73BC9C621EF26AE100032F36 /* Services */,
+				735390331F18B63100DD4A4F /* Common */,
 				73A495CE1EF53A270012CA4E /* Vertx */,
 				735BF98A1EF6877700432139 /* Source */,
 				73647CF61EF1915F0044C2F6 /* Main.storyboard */,
@@ -445,6 +464,7 @@
 				73A495D61EF53A270012CA4E /* Mutex.swift in Sources */,
 				73647CF31EF1915F0044C2F6 /* AppDelegate.swift in Sources */,
 				73A495D51EF53A270012CA4E /* Message.swift in Sources */,
+				735390361F18B68800DD4A4F /* EventBusManager.swift in Sources */,
 				73D262081EF66FC20001E9CA /* KeychainSavingProtocol.swift in Sources */,
 				73BC9C601EF268F600032F36 /* ServerGateway+Authentication.swift in Sources */,
 				73BC9C681EF26B5E00032F36 /* AuthenticationService.swift in Sources */,
