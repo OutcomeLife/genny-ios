@@ -183,16 +183,6 @@ public class EventBus {
     /// Disconnects from the remote bridge.
     public func disconnect() {
         if let s = self.socket {
-            for handlers in self.handlers.values {
-                for registration in handlers.values {
-                    // We don't care about errors here, since we're
-                    // not going to be receiving messages anyway. We
-                    // unregister as a convenience to the bridge.
-                    let _ = try? unregister(address: registration.address,
-                                            id: registration.id,
-                                            headers: registration.headers)
-                }
-            }   
             s.close()
             self.socket = nil
         }
