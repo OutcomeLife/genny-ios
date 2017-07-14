@@ -12,6 +12,7 @@ final class MainViewController: UIViewController {
 
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var reconnectButton: UIButton!
+    @IBOutlet weak var responseLabel: UILabel!
     
     fileprivate let manager = EventBusManager.shared
     
@@ -74,5 +75,11 @@ extension MainViewController: EventBusManagerDelegate {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
+    }
+    
+    func manager(didReceiveMessage message: Message) {
+        DispatchQueue.main.async {
+            self.responseLabel.text = message.body["message"].stringValue
+        }
     }
 }

@@ -85,17 +85,26 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTw-cS-eEE">
+                                <rect key="frame" x="187" y="442.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PXZ-B8-nuB" firstAttribute="centerX" secondItem="nul-Ar-5sO" secondAttribute="centerX" id="KJg-2h-dbv"/>
                             <constraint firstItem="PXZ-B8-nuB" firstAttribute="centerY" secondItem="nul-Ar-5sO" secondAttribute="centerY" id="OZ1-oZ-vBX"/>
                             <constraint firstItem="t4I-YA-vRi" firstAttribute="leading" secondItem="nul-Ar-5sO" secondAttribute="leadingMargin" id="Q9O-ol-QJS"/>
+                            <constraint firstItem="gTw-cS-eEE" firstAttribute="centerX" secondItem="nul-Ar-5sO" secondAttribute="centerX" id="RQp-8V-vbk"/>
                             <constraint firstItem="t4I-YA-vRi" firstAttribute="top" secondItem="7dF-XL-uyg" secondAttribute="bottom" id="tpA-R2-1pv"/>
+                            <constraint firstItem="gTw-cS-eEE" firstAttribute="top" secondItem="PXZ-B8-nuB" secondAttribute="bottom" constant="50" id="uaD-sd-C81"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="reconnectButton" destination="zro-tB-vcf" id="AnJ-bJ-7jb"/>
+                        <outlet property="responseLabel" destination="gTw-cS-eEE" id="fH7-Uz-eml"/>
                         <outlet property="sendButton" destination="Ee1-yq-7tG" id="Lj3-uy-xGG"/>
                     </connections>
                 </viewController>

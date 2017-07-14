@@ -13,6 +13,7 @@ protocol EventBusManagerDelegate: class {
     func managerDidConnect()
     func managerDidDisconnect()
     func manager(didReceiveError error: Error)
+    func manager(didReceiveMessage message: Message)
 }
 
 final class EventBusManager: NSObject {
@@ -49,22 +50,18 @@ final class EventBusManager: NSObject {
             try eventBus.connect()
             listeners.forEach { $0.managerDidConnect() }
             
-            do {
-                _ = try eventBus.register(address: "address.outbound") { message in
-                    print("Message: \(message.body)")
-                }
-                
-                eventBus.register(errorHandler: { error in
-                    switch error {
-                    case .disconnected:
-                        self.listeners.forEach { $0.managerDidDisconnect() }
-                    case .invalidData, .serverError:
-                        self.listeners.forEach { $0.manager(didReceiveError: error) }
-                    }
-                })
-            } catch let error {
-                listeners.forEach { $0.manager(didReceiveError: error) }
+            _ = try eventBus.register(address: "address.outbound") { message in
+                self.listeners.forEach { $0.manager(didReceiveMessage: message) }
             }
+            
+            eventBus.register(errorHandler: { error in
+                switch error {
+                case .disconnected:
+                    self.listeners.forEach { $0.managerDidDisconnect() }
+                case .invalidData, .serverError:
+                    self.listeners.forEach { $0.manager(didReceiveError: error) }
+                }
+            })
         } catch let error {
             listeners.forEach { $0.manager(didReceiveError: error) }
         }
