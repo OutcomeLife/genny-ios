@@ -22,15 +22,15 @@ class Mutex {
     
     init(recursive: Bool = false) {
         var attr = pthread_mutexattr_t()
-	pthread_mutexattr_init(&attr)
-
-	if recursive {
+        pthread_mutexattr_init(&attr)
+        
+        if recursive {
             pthread_mutexattr_settype(&attr, Int32(PTHREAD_MUTEX_RECURSIVE))
         } else {
-	    pthread_mutexattr_settype(&attr, Int32(PTHREAD_MUTEX_NORMAL))
+            pthread_mutexattr_settype(&attr, Int32(PTHREAD_MUTEX_NORMAL))
         }
     }
-
+    
     deinit {
         pthread_mutex_destroy(&mutex)
     }
@@ -38,11 +38,8 @@ class Mutex {
     func lock() {
         pthread_mutex_lock(&mutex)
     }
-
+    
     func unlock() {
         pthread_mutex_unlock(&mutex)
     }
-    
 }
-    
-        

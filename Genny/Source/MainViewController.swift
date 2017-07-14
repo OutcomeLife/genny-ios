@@ -24,6 +24,10 @@ final class MainViewController: UIViewController {
         
         managerDidConnect()
     }
+    
+    deinit {
+        manager.remove(listener: self)
+    }
 }
 
 // MARK: - IBAction

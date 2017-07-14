@@ -37,8 +37,3 @@ public struct Response {
         return Response(message: nil)
     }
 }
-
-
-
-
-

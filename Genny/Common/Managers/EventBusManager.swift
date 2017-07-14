@@ -32,6 +32,9 @@ final class EventBusManager: NSObject {
         connect()
     }
     
+    /// Add listener to be notified of events
+    ///
+    /// - Parameter listener: class that conforms to EventBusManagerDelegate
     func add(listener: EventBusManagerDelegate) {
         listeners.append(listener)
     }
@@ -45,6 +48,7 @@ final class EventBusManager: NSObject {
         listeners.remove(at: indexToRemove)
     }
     
+    /// Connect and register to 'address.outbound'
     func connect() {
         do {
             try eventBus.connect()
@@ -67,8 +71,11 @@ final class EventBusManager: NSObject {
         }
     }
     
+    /// Publish dictionary data to 'address.inbound'
+    ///
+    /// - Parameter data: dictionary to publish
     func publish(data: [String: Any]) {
-        guard eventBus.connected() else { print("dc-ed"); return }
+        guard eventBus.connected() else { return }
         
         do {
             try eventBus.publish(to: "address.inbound", body: data)
