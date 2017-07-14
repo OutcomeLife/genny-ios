@@ -10,36 +10,11 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
-    fileprivate var eventBus: EventBus!
+    
+    fileprivate let manager = EventBusManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        initializeEventBus()
-    }
-}
-
-// MARK: - Private
-extension MainViewController {
-    
-    fileprivate func initializeEventBus() {
-        eventBus = EventBus(host: "localhost", port: 8081)
-        
-        do {
-            try eventBus.connect()
-            
-            do {
-                _ = try eventBus.register(address: "address.outbound") { message in
-                    print("got message \(message.body)")
-                }
-            } catch let error {
-                print("Error Registering: " + error.localizedDescription)
-            }
-            
-        } catch let error {
-            print("Error Connecting: " + error.localizedDescription)
-        }
     }
 }
 
@@ -47,10 +22,12 @@ extension MainViewController {
 extension MainViewController {
     
     @IBAction fileprivate func didTapButton() {
-        do {
-            try eventBus.publish(to: "address.inbound", body: ["message": "hello from ios!"])
-        } catch let error {
-            print("Error Publishing: " + error.localizedDescription)
+        manager.publish(data: ["message": "hello from ios!"])
+    }
+    }
+}
+
+    
         }
     }
 }

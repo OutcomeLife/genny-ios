@@ -24,7 +24,12 @@ final class EventBusManager: NSObject {
     override private init() {
         EventBus(host: <#T##String#>, port: <#T##Int#>, pingEvery: <#T##Int#>)
         eventBus = EventBus(host: "localhost", port: 8081)
+        super.init()
+        connect()
+    }
         
+    
+    func connect() {
         do {
             try eventBus.connect()
             
